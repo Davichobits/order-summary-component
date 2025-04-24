@@ -8,15 +8,16 @@
   <title>Frontend Mentor | Order summary card</title>
 </head>
 <body class="
-  bg-Pale-blue
-  font-Red-Hat-Display
-  bg-[url(/assets/images/pattern-background-mobile.svg)]
-  bg-no-repeat
-  h-screen
-  text-Dark-blue
-  grid
-  place-content-center
-  sm:bg-[url(/assets/images/pattern-background-desktop.svg)]
+bg-Pale-blue
+font-Red-Hat-Display
+bg-[url(/assets/images/pattern-background-mobile.svg)]
+bg-contain
+bg-no-repeat
+h-screen
+text-Dark-blue
+grid
+place-content-center
+sm:bg-[url(/assets/images/pattern-background-desktop.svg)]
 ">
 
   <div class="
@@ -25,17 +26,38 @@
     rounded-xl
     overflow-hidden
     text-center
+    sm:w-[450px]
   ">
     <img src="./assets/images/illustration-hero.svg" alt="">
 
     <div class="p-8">
-      <h1 class="font-black text-[22px] mb-4">Order Summary</h1>
-      <p class="text-Desaturated-blue mb-6">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-      <div class="bg-Very-pale-blue flex items-center rounded-[11px] p-4 mb-4">
+      <h1 class="
+      font-black
+      text-[22px]
+      mb-4
+      sm:text-[28px]
+      ">Order Summary</h1>
+      <p class="
+      text-Desaturated-blue
+      mb-6
+      text-[0.9375rem]
+      sm:text-base
+      sm:px-4
+      ">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="
+      bg-Very-pale-blue
+        flex
+        items-center
+        rounded-[11px]
+        p-4
+        mb-4
+        sm:mb-8
+        sm:p-6
+        ">
         <img class="mr-5" src="./assets/images/icon-music.svg" alt="icon music">
         <div>
-          <p class="text-sm font-black">$59.99/year</p>
-          <p class="text-Desaturated-blue">Annual Plan</p>
+          <p class="text-sm font-black sm:text-base">Annual Plan</p>
+          <p class="text-sm text-Desaturated-blue sm:text-base">$59.99/year</p>
         </div>
         <p class="
         ml-auto
@@ -44,6 +66,7 @@
         font-bold
         text-[0.8125rem]
         text-Bright-blue
+        sm:text-sm
         ">Change</p>
       </div>
       <button class="

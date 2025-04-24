@@ -7,10 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(80.8% 0.114 19.571);
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --font-weight-bold: 700;
     --font-weight-black: 900;
     --radius-xl: 0.75rem;
@@ -194,9 +198,6 @@
   .grid {
     display: grid;
   }
-  .inline-block {
-    display: inline-block;
-  }
   .table {
     display: table;
   }
@@ -214,9 +215,6 @@
   }
   .resize {
     resize: both;
-  }
-  .place-content-between {
-    place-content: space-between;
   }
   .place-content-center {
     place-content: center;
@@ -240,20 +238,29 @@
   .bg-Bright-blue {
     background-color: var(--color-Bright-blue);
   }
+  .bg-Desaturated-blue {
+    background-color: var(--color-Desaturated-blue);
+  }
   .bg-Pale-blue {
     background-color: var(--color-Pale-blue);
   }
   .bg-Very-pale-blue {
     background-color: var(--color-Very-pale-blue);
   }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\/assets\/images\/pattern-background-desktop\.svg\)\] {
-    background-image: url(/assets/images/pattern-background-desktop.svg);
-  }
   .bg-\[url\(\/assets\/images\/pattern-background-mobile\.svg\)\] {
     background-image: url(/assets/images/pattern-background-mobile.svg);
+  }
+  .bg-contain {
+    background-size: contain;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
@@ -279,6 +286,9 @@
   }
   .text-\[0\.8125rem\] {
     font-size: 0.8125rem;
+  }
+  .text-\[0\.9375rem\] {
+    font-size: 0.9375rem;
   }
   .text-\[22px\] {
     font-size: 22px;
@@ -309,19 +319,8 @@
   .decoration-Bright-blue {
     text-decoration-color: var(--color-Bright-blue);
   }
-  .decoration-0 {
-    text-decoration-thickness: 0px;
-  }
-  .shadow-2xl {
-    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-\[0_20px_20px\] {
     --tw-shadow: 0 20px 20px var(--tw-shadow-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-lg {
-    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-Bright-blue {
@@ -330,31 +329,56 @@
       --tw-shadow-color: color-mix(in oklab, var(--color-Bright-blue) var(--tw-shadow-alpha), transparent);
     }
   }
-  .shadow-Bright-blue\/19 {
-    --tw-shadow-color: color-mix(in srgb, hsl(245, 75%, 52%) 19%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-Bright-blue) 19%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
   .shadow-Bright-blue\/20 {
     --tw-shadow-color: color-mix(in srgb, hsl(245, 75%, 52%) 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-Bright-blue) 20%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
-  .shadow-Bright-blue\/50 {
-    --tw-shadow-color: color-mix(in srgb, hsl(245, 75%, 52%) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-Bright-blue) 50%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .sm\:mb-8 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:w-\[450px\] {
+    @media (width >= 40rem) {
+      width: 450px;
+    }
+  }
   .sm\:bg-\[url\(\/assets\/images\/pattern-background-desktop\.svg\)\] {
     @media (width >= 40rem) {
       background-image: url(/assets/images/pattern-background-desktop.svg);
+    }
+  }
+  .sm\:p-6 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 6);
+    }
+  }
+  .sm\:px-4 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:text-base {
+    @media (width >= 40rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .sm\:text-sm {
+    @media (width >= 40rem) {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .sm\:text-\[28px\] {
+    @media (width >= 40rem) {
+      font-size: 28px;
     }
   }
 }
