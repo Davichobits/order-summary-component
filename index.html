@@ -7,19 +7,61 @@
   <link rel="stylesheet" href="./src/output.css">
   <title>Frontend Mentor | Order summary card</title>
 </head>
-<body>
+<body class="
+  bg-Pale-blue
+  font-Red-Hat-Display
+  bg-[url(/assets/images/pattern-background-mobile.svg)]
+  bg-no-repeat
+  h-screen
+  text-Dark-blue
+  grid
+  place-content-center
+  sm:bg-[url(/assets/images/pattern-background-desktop.svg)]
+">
 
-  Order Summary
+  <div class="
+    w-[327px] 
+    bg-white
+    rounded-xl
+    overflow-hidden
+    text-center
+  ">
+    <img src="./assets/images/illustration-hero.svg" alt="">
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <div class="p-8">
+      <h1 class="font-black text-[22px] mb-4">Order Summary</h1>
+      <p class="text-Desaturated-blue mb-6">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="bg-Very-pale-blue flex items-center rounded-[11px] p-4 mb-4">
+        <img class="mr-5" src="./assets/images/icon-music.svg" alt="icon music">
+        <div>
+          <p class="text-sm font-black">$59.99/year</p>
+          <p class="text-Desaturated-blue">Annual Plan</p>
+        </div>
+        <p class="
+        ml-auto
+        underline
+        decoration-Bright-blue
+        font-bold
+        text-[0.8125rem]
+        text-Bright-blue
+        ">Change</p>
+      </div>
+      <button class="
+      bg-Bright-blue
+      block
+      w-full
+      text-white
+      p-4
+      rounded-[11px]
+      font-black
+      text-[.9375rem]
+      shadow-[0_20px_20px]
+      shadow-Bright-blue/20
+      mb-6
+      ">Proceed to Payment</button>
+      <button class="text-[.9375rem] font-black text-Desaturated-blue">Cancel Order</button>
+    </div>
+  </div>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
 </body>
 </html>
